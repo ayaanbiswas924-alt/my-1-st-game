@@ -183,4 +183,8 @@ shape = SubResource("RectangleShape2D_5p5ba")
 position = Vector2(1048, 446)
 shape = SubResource("RectangleShape2D_5p5ba")
 
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D3" unique_id=333896737]
+position = Vector2(143, 308)
+shape = SubResource("RectangleShape2D_5p5ba")
+
 [connection signal="area_entered" from="Player/Pickup Area" to="Player" method="_on_pickup_area_area_entered"]

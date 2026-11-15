@@ -23,17 +23,22 @@ Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
 Button/font_sizes/font_size = 41
 
 [sub_resource type="Theme" id="Theme_l48gv"]
-Button/colors/font_color = Color(0.55922306, 0.2988339, 0.7603405, 1)
+Button/colors/font_color = Color(0.604099, 0.39762193, 0.003467628, 1)
 Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
 Button/font_sizes/font_size = 41
 
 [sub_resource type="Theme" id="Theme_mae5d"]
+Button/colors/font_color = Color(0.34846893, 0.50392926, 3.85046e-07, 1)
+Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
+Button/font_sizes/font_size = 41
+
+[sub_resource type="Theme" id="Theme_iqepy"]
 Button/colors/font_color = Color(0.6003616, 0.32055116, 0.6145206, 1)
 Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
 Button/font_sizes/font_size = 41
 
 [sub_resource type="Theme" id="Theme_ecwwl"]
-Button/colors/font_color = Color(0.65299684, 0.21533206, 0.72346866, 1)
+Button/colors/font_color = Color(0.7483376, 0.00016412586, 0.66278934, 1)
 Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
 Button/font_sizes/font_size = 41
 
@@ -113,7 +118,7 @@ offset_left = 504.0
 offset_top = 149.0
 offset_right = 709.0
 offset_bottom = 260.0
-theme = SubResource("Theme_mae5d")
+theme = SubResource("Theme_iqepy")
 text = "Level 7"
 
 [node name="Button8" type="Button" parent="CanvasLayer" unique_id=634523930]
@@ -148,5 +153,5 @@ text = "Level 10"
 [connection signal="pressed" from="CanvasLayer/Button6" to="." method="_on_button_6_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button7" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button8" to="." method="_on_button_8_pressed"]
-[connection signal="pressed" from="CanvasLayer/Button9" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button9" to="." method="_on_button_9_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button10" to="." method="_on_button_3_pressed"]

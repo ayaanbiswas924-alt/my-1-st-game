@@ -39,7 +39,7 @@ position = Vector2(61, 31)
 script = SubResource("GDScript_eqrsh")
 
 [node name="GeometeryDashV2" type="Sprite2D" parent="." unique_id=1836274510]
-position = Vector2(518.00006, 358)
+position = Vector2(528, 345)
 scale = Vector2(2.4458334, 2.1034722)
 texture = ExtResource("1_i2041")
 

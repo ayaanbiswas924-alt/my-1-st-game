@@ -1,25 +1,25 @@
 [gd_scene format=3 uid="uid://6q4xdtvbuk6s"]
 
-[ext_resource type="Texture2D" uid="uid://dpc3fbwa42wg2" path="res://geometry-dash-1600-x-900-background-g8hjyws8q3r8r69l.jpg" id="1_1hdf7"]
-[ext_resource type="Texture2D" uid="uid://22mv4e6qh0ru" path="res://OIP (5).webp" id="2_wxivg"]
-[ext_resource type="Texture2D" uid="uid://cdjnqfnbsnnu2" path="res://OIP (3).webp" id="3_hwwpj"]
-[ext_resource type="Script" uid="uid://bhr3syq35lcpy" path="res://player.gd" id="4_0w5uq"]
-[ext_resource type="Texture2D" uid="uid://c4457dice5ryi" path="res://31073475fc4fe0f27c6b876472f0888e.png" id="5_7touu"]
-[ext_resource type="Texture2D" uid="uid://b5nef6dpidw18" path="res://diamond.webp" id="6_wkq1x"]
-[ext_resource type="PackedScene" uid="uid://yf2602rjikfv" path="res://fire.tscn" id="7_c5dar"]
+[ext_resource type="Texture2D" uid="uid://dpc3fbwa42wg2" path="res://geometry-dash-1600-x-900-background-g8hjyws8q3r8r69l.jpg" id="1_ky2ik"]
+[ext_resource type="Texture2D" uid="uid://22mv4e6qh0ru" path="res://OIP (5).webp" id="2_qqxcc"]
+[ext_resource type="Texture2D" uid="uid://cdjnqfnbsnnu2" path="res://OIP (3).webp" id="3_yr1m6"]
+[ext_resource type="Script" uid="uid://bhr3syq35lcpy" path="res://player.gd" id="4_6i4tg"]
+[ext_resource type="Texture2D" uid="uid://c4457dice5ryi" path="res://31073475fc4fe0f27c6b876472f0888e.png" id="5_5trn2"]
+[ext_resource type="Texture2D" uid="uid://doofh0olocr53" path="res://bear.png" id="6_ky2ik"]
+[ext_resource type="PackedScene" uid="uid://yf2602rjikfv" path="res://fire.tscn" id="7_t617i"]
 
 [sub_resource type="GDScript" id="GDScript_eqrsh"]
 script/source = "extends Node2D
-const diamond = preload(\"res://diamond.webp\")
+const bear = preload(\"res://bear.png\")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Fire.change_image(diamond)
-	$Fire.scale(5.0)
-	$Fire2.change_image(diamond)
-	$Fire2.scale(5.0)
-	$Fire3.change_image(diamond)
-	$Fire3.scale(5.0)
+	$Fire.change_image(bear)
+	$Fire.scale(2.0)
+	$Fire2.change_image(bear)
+	$Fire2.scale(2.0)
+	$Fire3.change_image(bear)
+	$Fire3.scale(2.0)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -46,7 +46,7 @@ script = SubResource("GDScript_eqrsh")
 [node name="GeometeryDashV2" type="Sprite2D" parent="." unique_id=1836274510]
 position = Vector2(515.5, 292.25003)
 scale = Vector2(0.71812505, 0.7216667)
-texture = ExtResource("1_1hdf7")
+texture = ExtResource("1_ky2ik")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="GeometeryDashV2" unique_id=370492197]
 position = Vector2(14.7188835, 57.99934)
@@ -54,7 +54,7 @@ position = Vector2(14.7188835, 57.99934)
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1132615094]
 position = Vector2(1461, -230.99998)
 scale = Vector2(2.350144, -0.025647165)
-texture = ExtResource("2_wxivg")
+texture = ExtResource("2_qqxcc")
 
 [node name="Basket" type="Area2D" parent="." unique_id=314186534 groups=["basket"]]
 position = Vector2(272.00003, 318)
@@ -62,7 +62,7 @@ scale = Vector2(0.5433538, -0.36804742)
 
 [node name="Oip(3)" type="Sprite2D" parent="Basket" unique_id=547635674]
 position = Vector2(-86.49981, 73.36009)
-texture = ExtResource("3_hwwpj")
+texture = ExtResource("3_yr1m6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Basket" unique_id=878023421]
 position = Vector2(-85.86694, 55.6084)
@@ -72,10 +72,10 @@ shape = SubResource("RectangleShape2D_n3ly3")
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1009537867]
 position = Vector2(50, 242)
 scale = Vector2(0.40994838, 0.4153606)
-script = ExtResource("4_0w5uq")
+script = ExtResource("4_6i4tg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1318704825]
-texture = ExtResource("5_7touu")
+texture = ExtResource("5_5trn2")
 
 [node name="Pickup Area" type="Area2D" parent="Player" unique_id=498171429]
 
@@ -86,9 +86,10 @@ scale = Vector2(11.687304, 7.763768)
 shape = SubResource("CircleShape2D_5p5ba")
 
 [node name="Heldfire" type="Sprite2D" parent="Player" unique_id=744416421]
+visible = false
 position = Vector2(170.7532, -26.483027)
 scale = Vector2(-0.15812299, 0.17503338)
-texture = ExtResource("6_wkq1x")
+texture = ExtResource("6_ky2ik")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player" unique_id=1466967059]
 
@@ -102,13 +103,13 @@ position = Vector2(-9.757333, 7.222658)
 scale = Vector2(1, 0.9999999)
 shape = SubResource("RectangleShape2D_r1u83")
 
-[node name="Fire" parent="." unique_id=1951865254 instance=ExtResource("7_c5dar")]
+[node name="Fire" parent="." unique_id=1951865254 instance=ExtResource("7_t617i")]
 position = Vector2(820, 418)
 
-[node name="Fire2" parent="." unique_id=668814660 instance=ExtResource("7_c5dar")]
+[node name="Fire2" parent="." unique_id=668814660 instance=ExtResource("7_t617i")]
 position = Vector2(535, 369)
 
-[node name="Fire3" parent="." unique_id=350116197 instance=ExtResource("7_c5dar")]
+[node name="Fire3" parent="." unique_id=350116197 instance=ExtResource("7_t617i")]
 position = Vector2(1006, 214)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=454703750]

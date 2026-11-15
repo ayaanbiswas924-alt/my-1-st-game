@@ -89,6 +89,7 @@ scale = Vector2(11.687304, 7.763768)
 shape = SubResource("CircleShape2D_5p5ba")
 
 [node name="Heldfire" type="Sprite2D" parent="Player" unique_id=744416421]
+visible = false
 position = Vector2(182.94986, -57.781136)
 scale = Vector2(-0.036904883, 0.036356304)
 texture = ExtResource("6_2kba5")
