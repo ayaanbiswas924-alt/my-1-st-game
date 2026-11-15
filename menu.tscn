@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://dsau3ecx4bxlk"]
 
 [ext_resource type="Script" uid="uid://dllwyn8i11uxt" path="res://menu.gd" id="1_lti8b"]
-[ext_resource type="Texture2D" uid="uid://cwxdwnn1dgeru" path="res://Level Select (1).png" id="2_ouk20"]
-[ext_resource type="Texture2D" uid="uid://grli5t8mjs8m" path="res://download (1) (1).png" id="3_mae5d"]
 
 [sub_resource type="Theme" id="Theme_lti8b"]
 Button/colors/font_color = Color(0.8361143, 0, 0.1905264, 1)
@@ -25,17 +23,22 @@ Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
 Button/font_sizes/font_size = 41
 
 [sub_resource type="Theme" id="Theme_l48gv"]
-Button/colors/font_color = Color(0.55922306, 0.2988339, 0.7603405, 1)
+Button/colors/font_color = Color(0.604099, 0.39762193, 0.003467628, 1)
 Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
 Button/font_sizes/font_size = 41
 
 [sub_resource type="Theme" id="Theme_mae5d"]
+Button/colors/font_color = Color(0.34846893, 0.50392926, 3.85046e-07, 1)
+Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
+Button/font_sizes/font_size = 41
+
+[sub_resource type="Theme" id="Theme_iqepy"]
 Button/colors/font_color = Color(0.6003616, 0.32055116, 0.6145206, 1)
 Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
 Button/font_sizes/font_size = 41
 
 [sub_resource type="Theme" id="Theme_ecwwl"]
-Button/colors/font_color = Color(0.65299684, 0.21533206, 0.72346866, 1)
+Button/colors/font_color = Color(0.7483376, 0.00016412586, 0.66278934, 1)
 Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
 Button/font_sizes/font_size = 41
 
@@ -49,167 +52,113 @@ Button/colors/font_color = Color(0.49063927, 0.4430111, 0.30437946, 1)
 Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
 Button/font_sizes/font_size = 41
 
+[sub_resource type="Theme" id="Theme_h1wq0"]
+Button/colors/font_color = Color(0.89244884, 0.99999994, 0.94746774, 1)
+Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
+Button/font_sizes/font_size = 41
+
 [node name="Control" type="Control" unique_id=1693531873]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 11.0
-offset_bottom = 11.0
+offset_left = -2.0
+offset_top = 7.0
+offset_right = -2.0
+offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lti8b")
 
-[node name="LevelSelect(1)" type="Sprite2D" parent="." unique_id=839401200]
-position = Vector2(577, 312)
-scale = Vector2(1.2777778, 1.2727273)
-texture = ExtResource("2_ouk20")
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=391627281]
 
 [node name="Button" type="Button" parent="CanvasLayer" unique_id=1289131688]
-offset_left = 379.0
-offset_top = 77.0
-offset_right = 584.0
-offset_bottom = 188.0
-scale = Vector2(0.7409923, 0.607729)
+offset_left = 265.0
+offset_top = 25.0
+offset_right = 470.0
+offset_bottom = 136.0
 theme = SubResource("Theme_lti8b")
 text = "Level 1"
 
 [node name="Button2" type="Button" parent="CanvasLayer" unique_id=661227898]
-offset_left = 376.0
-offset_top = 202.0
-offset_right = 581.0
-offset_bottom = 313.0
-scale = Vector2(0.7409923, 0.607729)
+offset_left = 262.0
+offset_top = 150.0
+offset_right = 467.0
+offset_bottom = 261.0
 theme = SubResource("Theme_ouk20")
 text = "Level 2"
 
 [node name="Button3" type="Button" parent="CanvasLayer" unique_id=663047477]
-offset_left = 378.0
-offset_top = 327.0
-offset_right = 583.0
-offset_bottom = 438.0
-scale = Vector2(0.7409923, 0.607729)
+offset_left = 264.0
+offset_top = 275.0
+offset_right = 469.0
+offset_bottom = 386.0
 theme = SubResource("Theme_4hy44")
 text = "Level 3"
 
 [node name="Button4" type="Button" parent="CanvasLayer" unique_id=2108616251]
-offset_left = 379.0
-offset_top = 452.0
-offset_right = 584.0
-offset_bottom = 563.0
-scale = Vector2(0.7409923, 0.6077291)
+offset_left = 265.0
+offset_top = 400.0
+offset_right = 470.0
+offset_bottom = 511.0
 theme = SubResource("Theme_ytr4m")
 text = "Level 4"
 
 [node name="Button5" type="Button" parent="CanvasLayer" unique_id=159897219]
-offset_left = 380.0
-offset_top = 576.0
-offset_right = 585.0
-offset_bottom = 687.0
-scale = Vector2(0.7409923, 0.607729)
+offset_left = 266.0
+offset_top = 524.0
+offset_right = 471.0
+offset_bottom = 635.0
 theme = SubResource("Theme_l48gv")
 text = "Level 5"
 
 [node name="Button6" type="Button" parent="CanvasLayer" unique_id=2074073872]
-offset_left = 620.0
-offset_top = 77.0
-offset_right = 825.0
-offset_bottom = 188.0
-scale = Vector2(0.7409923, 0.607729)
+offset_left = 506.0
+offset_top = 25.0
+offset_right = 711.0
+offset_bottom = 136.0
 theme = SubResource("Theme_mae5d")
 text = "Level 6"
 
 [node name="Button7" type="Button" parent="CanvasLayer" unique_id=1989386472]
-offset_left = 618.0
-offset_top = 201.0
-offset_right = 823.0
-offset_bottom = 312.0
-scale = Vector2(0.7409923, 0.607729)
-theme = SubResource("Theme_mae5d")
+offset_left = 504.0
+offset_top = 149.0
+offset_right = 709.0
+offset_bottom = 260.0
+theme = SubResource("Theme_iqepy")
 text = "Level 7"
 
 [node name="Button8" type="Button" parent="CanvasLayer" unique_id=634523930]
-offset_left = 620.0
-offset_top = 327.0
-offset_right = 825.0
-offset_bottom = 438.0
-scale = Vector2(0.7409923, 0.607729)
+offset_left = 506.0
+offset_top = 275.0
+offset_right = 711.0
+offset_bottom = 386.0
 theme = SubResource("Theme_ecwwl")
 text = "Level 8"
 
 [node name="Button9" type="Button" parent="CanvasLayer" unique_id=1113218464]
-offset_left = 622.0
-offset_top = 451.0
-offset_right = 827.0
-offset_bottom = 562.0
-scale = Vector2(0.7409923, 0.6077291)
+offset_left = 508.0
+offset_top = 399.0
+offset_right = 713.0
+offset_bottom = 510.0
 theme = SubResource("Theme_kk3ma")
 text = "Level 9"
 
 [node name="Button10" type="Button" parent="CanvasLayer" unique_id=1990944078]
-offset_left = 622.0
-offset_top = 573.0
-offset_right = 827.0
-offset_bottom = 684.0
-scale = Vector2(0.7409923, 0.607729)
+offset_left = 508.0
+offset_top = 521.0
+offset_right = 713.0
+offset_bottom = 632.0
 theme = SubResource("Theme_nrnbx")
 text = "Level 10"
 
-[node name="Download(1)(1)" type="Sprite2D" parent="." unique_id=1088543785]
-position = Vector2(567.00006, 350)
-rotation = -1.3575407
-scale = Vector2(2.726162, 0.29941806)
-texture = ExtResource("3_mae5d")
-
-[node name="Download(1)(1)2" type="Sprite2D" parent="." unique_id=1283408733]
-position = Vector2(453, 535.99994)
-rotation = 1.549455
-scale = Vector2(0.42552078, 0.33731246)
-texture = ExtResource("3_mae5d")
-
-[node name="Download(1)(1)3" type="Sprite2D" parent="." unique_id=1125062127]
-position = Vector2(444, 412)
-rotation = 1.549455
-scale = Vector2(0.42552078, 0.33731246)
-texture = ExtResource("3_mae5d")
-
-[node name="Download(1)(1)4" type="Sprite2D" parent="." unique_id=1063737195]
-position = Vector2(446, 280.99994)
-rotation = 1.549455
-scale = Vector2(0.42552078, 0.33731246)
-texture = ExtResource("3_mae5d")
-
-[node name="Download(1)(1)5" type="Sprite2D" parent="." unique_id=1958707481]
-position = Vector2(451, 156.99998)
-rotation = 1.549455
-scale = Vector2(0.42552078, 0.33731246)
-texture = ExtResource("3_mae5d")
-
-[node name="Download(1)(1)6" type="Sprite2D" parent="." unique_id=752962011]
-position = Vector2(692, 533)
-rotation = -4.7124553
-scale = Vector2(0.42552078, 0.33731246)
-texture = ExtResource("3_mae5d")
-
-[node name="Download(1)(1)7" type="Sprite2D" parent="." unique_id=2051019717]
-position = Vector2(692.00006, 407)
-rotation = -4.7124553
-scale = Vector2(0.42552078, 0.33731246)
-texture = ExtResource("3_mae5d")
-
-[node name="Download(1)(1)8" type="Sprite2D" parent="." unique_id=204653146]
-position = Vector2(688.00006, 281)
-rotation = -4.7124553
-scale = Vector2(0.42552078, 0.33731246)
-texture = ExtResource("3_mae5d")
-
-[node name="Download(1)(1)9" type="Sprite2D" parent="." unique_id=1116001054]
-position = Vector2(695, 157.00003)
-rotation = -4.699575
-scale = Vector2(0.42552078, 0.33731246)
-texture = ExtResource("3_mae5d")
+[node name="Boss Level" type="Button" parent="CanvasLayer" unique_id=1161780854]
+offset_left = 737.0
+offset_top = 229.0
+offset_right = 1020.0
+offset_bottom = 428.0
+theme = SubResource("Theme_h1wq0")
+text = "Boss Level"
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]
@@ -219,5 +168,6 @@ texture = ExtResource("3_mae5d")
 [connection signal="pressed" from="CanvasLayer/Button6" to="." method="_on_button_6_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button7" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button8" to="." method="_on_button_8_pressed"]
-[connection signal="pressed" from="CanvasLayer/Button9" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button9" to="." method="_on_button_9_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button10" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Boss Level" to="." method="_on_button_3_pressed"]
