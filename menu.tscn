@@ -17,8 +17,33 @@ Button/colors/font_color = Color(0.5927847, 0.00403894, 0.9682607, 1)
 Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
 Button/font_sizes/font_size = 41
 
+[sub_resource type="Theme" id="Theme_ytr4m"]
+Button/colors/font_color = Color(0.3546286, 0.29792833, 1, 1)
+Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
+Button/font_sizes/font_size = 41
+
+[sub_resource type="Theme" id="Theme_l48gv"]
+Button/colors/font_color = Color(0.55922306, 0.2988339, 0.7603405, 1)
+Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
+Button/font_sizes/font_size = 41
+
 [sub_resource type="Theme" id="Theme_mae5d"]
+Button/colors/font_color = Color(0.6003616, 0.32055116, 0.6145206, 1)
+Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
+Button/font_sizes/font_size = 41
+
+[sub_resource type="Theme" id="Theme_ecwwl"]
+Button/colors/font_color = Color(0.65299684, 0.21533206, 0.72346866, 1)
+Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
+Button/font_sizes/font_size = 41
+
+[sub_resource type="Theme" id="Theme_kk3ma"]
 Button/colors/font_color = Color(1.3717264e-06, 0.5289415, 0.35283485, 1)
+Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
+Button/font_sizes/font_size = 41
+
+[sub_resource type="Theme" id="Theme_nrnbx"]
+Button/colors/font_color = Color(0.49063927, 0.4430111, 0.30437946, 1)
 Button/colors/font_hover_color = Color(1, 0.25179386, 0.2643634, 1)
 Button/font_sizes/font_size = 41
 
@@ -64,7 +89,7 @@ offset_left = 265.0
 offset_top = 400.0
 offset_right = 470.0
 offset_bottom = 511.0
-theme = SubResource("Theme_mae5d")
+theme = SubResource("Theme_ytr4m")
 text = "Level 4"
 
 [node name="Button5" type="Button" parent="CanvasLayer" unique_id=159897219]
@@ -72,7 +97,7 @@ offset_left = 266.0
 offset_top = 524.0
 offset_right = 471.0
 offset_bottom = 635.0
-theme = SubResource("Theme_mae5d")
+theme = SubResource("Theme_l48gv")
 text = "Level 5"
 
 [node name="Button6" type="Button" parent="CanvasLayer" unique_id=2074073872]
@@ -96,7 +121,7 @@ offset_left = 506.0
 offset_top = 275.0
 offset_right = 711.0
 offset_bottom = 386.0
-theme = SubResource("Theme_mae5d")
+theme = SubResource("Theme_ecwwl")
 text = "Level 8"
 
 [node name="Button9" type="Button" parent="CanvasLayer" unique_id=1113218464]
@@ -104,7 +129,7 @@ offset_left = 508.0
 offset_top = 399.0
 offset_right = 713.0
 offset_bottom = 510.0
-theme = SubResource("Theme_mae5d")
+theme = SubResource("Theme_kk3ma")
 text = "Level 9"
 
 [node name="Button10" type="Button" parent="CanvasLayer" unique_id=1990944078]
@@ -112,7 +137,7 @@ offset_left = 508.0
 offset_top = 521.0
 offset_right = 713.0
 offset_bottom = 632.0
-theme = SubResource("Theme_mae5d")
+theme = SubResource("Theme_nrnbx")
 text = "Level 10"
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
