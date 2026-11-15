@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dsau3ecx4bxlk"]
 
 [ext_resource type="Script" uid="uid://dllwyn8i11uxt" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="Texture2D" uid="uid://cwxdwnn1dgeru" path="res://Level Select (1).png" id="2_ouk20"]
 
 [sub_resource type="Theme" id="Theme_lti8b"]
 Button/colors/font_color = Color(0.8361143, 0, 0.1905264, 1)
@@ -73,92 +74,108 @@ script = ExtResource("1_lti8b")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=391627281]
 
 [node name="Button" type="Button" parent="CanvasLayer" unique_id=1289131688]
-offset_left = 265.0
-offset_top = 25.0
-offset_right = 470.0
-offset_bottom = 136.0
+offset_left = 399.0
+offset_top = 62.0
+offset_right = 604.0
+offset_bottom = 173.0
+scale = Vector2(0.7288582, 0.65410876)
 theme = SubResource("Theme_lti8b")
 text = "Level 1"
 
 [node name="Button2" type="Button" parent="CanvasLayer" unique_id=661227898]
-offset_left = 262.0
-offset_top = 150.0
-offset_right = 467.0
-offset_bottom = 261.0
+offset_left = 396.0
+offset_top = 187.0
+offset_right = 601.0
+offset_bottom = 298.0
+scale = Vector2(0.7288582, 0.65410864)
 theme = SubResource("Theme_ouk20")
 text = "Level 2"
 
 [node name="Button3" type="Button" parent="CanvasLayer" unique_id=663047477]
-offset_left = 264.0
-offset_top = 275.0
-offset_right = 469.0
-offset_bottom = 386.0
+offset_left = 398.0
+offset_top = 312.0
+offset_right = 603.0
+offset_bottom = 423.0
+scale = Vector2(0.7288582, 0.6541085)
 theme = SubResource("Theme_4hy44")
 text = "Level 3"
 
 [node name="Button4" type="Button" parent="CanvasLayer" unique_id=2108616251]
-offset_left = 265.0
-offset_top = 400.0
-offset_right = 470.0
-offset_bottom = 511.0
+offset_left = 399.0
+offset_top = 437.0
+offset_right = 604.0
+offset_bottom = 548.0
+scale = Vector2(0.7288582, 0.65410876)
 theme = SubResource("Theme_ytr4m")
 text = "Level 4"
 
 [node name="Button5" type="Button" parent="CanvasLayer" unique_id=159897219]
-offset_left = 266.0
-offset_top = 524.0
-offset_right = 471.0
-offset_bottom = 635.0
+offset_left = 400.0
+offset_top = 561.0
+offset_right = 605.0
+offset_bottom = 672.0
+scale = Vector2(0.7288582, 0.65410876)
 theme = SubResource("Theme_l48gv")
 text = "Level 5"
 
 [node name="Button6" type="Button" parent="CanvasLayer" unique_id=2074073872]
-offset_left = 506.0
-offset_top = 25.0
-offset_right = 711.0
-offset_bottom = 136.0
+offset_left = 640.0
+offset_top = 62.0
+offset_right = 845.0
+offset_bottom = 173.0
+scale = Vector2(0.7288582, 0.65410876)
 theme = SubResource("Theme_mae5d")
 text = "Level 6"
 
 [node name="Button7" type="Button" parent="CanvasLayer" unique_id=1989386472]
-offset_left = 504.0
-offset_top = 149.0
-offset_right = 709.0
-offset_bottom = 260.0
+offset_left = 638.0
+offset_top = 186.0
+offset_right = 843.0
+offset_bottom = 297.0
+scale = Vector2(0.7288582, 0.65410876)
 theme = SubResource("Theme_iqepy")
 text = "Level 7"
 
 [node name="Button8" type="Button" parent="CanvasLayer" unique_id=634523930]
-offset_left = 506.0
-offset_top = 275.0
-offset_right = 711.0
-offset_bottom = 386.0
+offset_left = 640.0
+offset_top = 312.0
+offset_right = 845.0
+offset_bottom = 423.0
+scale = Vector2(0.7288582, 0.6541085)
 theme = SubResource("Theme_ecwwl")
 text = "Level 8"
 
 [node name="Button9" type="Button" parent="CanvasLayer" unique_id=1113218464]
-offset_left = 508.0
-offset_top = 399.0
-offset_right = 713.0
-offset_bottom = 510.0
+offset_left = 642.0
+offset_top = 436.0
+offset_right = 847.0
+offset_bottom = 547.0
+scale = Vector2(0.7288582, 0.6541085)
 theme = SubResource("Theme_kk3ma")
 text = "Level 9"
 
 [node name="Button10" type="Button" parent="CanvasLayer" unique_id=1990944078]
-offset_left = 508.0
-offset_top = 521.0
-offset_right = 713.0
-offset_bottom = 632.0
+offset_left = 642.0
+offset_top = 558.0
+offset_right = 847.0
+offset_bottom = 669.0
+scale = Vector2(0.7288582, 0.65410876)
 theme = SubResource("Theme_nrnbx")
 text = "Level 10"
 
 [node name="Boss Level" type="Button" parent="CanvasLayer" unique_id=1161780854]
-offset_left = 737.0
-offset_top = 229.0
-offset_right = 1020.0
-offset_bottom = 428.0
+offset_left = 871.0
+offset_top = 266.0
+offset_right = 1154.0
+offset_bottom = 465.0
+scale = Vector2(0.728858, 0.65410876)
 theme = SubResource("Theme_h1wq0")
 text = "Boss Level"
+
+[node name="LevelSelect(1)" type="Sprite2D" parent="." unique_id=1987582898]
+position = Vector2(582, 318.5)
+scale = Vector2(1.2777778, 1.2747035)
+texture = ExtResource("2_ouk20")
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]
