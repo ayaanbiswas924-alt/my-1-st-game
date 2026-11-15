@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dsau3ecx4bxlk"]
 
 [ext_resource type="Script" uid="uid://dllwyn8i11uxt" path="res://menu.gd" id="1_lti8b"]
-[ext_resource type="Script" uid="uid://oqmkteh0ul65" path="res://button_6.gd" id="2_ouk20"]
 
 [sub_resource type="Theme" id="Theme_lti8b"]
 Button/colors/font_color = Color(0.8361143, 0, 0.1905264, 1)
@@ -120,7 +119,6 @@ offset_right = 711.0
 offset_bottom = 136.0
 theme = SubResource("Theme_mae5d")
 text = "Level 6"
-script = ExtResource("2_ouk20")
 
 [node name="Button7" type="Button" parent="CanvasLayer" unique_id=1989386472]
 offset_left = 504.0
