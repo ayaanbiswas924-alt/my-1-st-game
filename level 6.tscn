@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://dtgtr1n1yvl4h"]
+
+[ext_resource type="Script" uid="uid://cvvah74j6ag5a" path="res://player.gd" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://30j4gvuboirt" path="res://node_2d.gd" id="1_rj586"]
+[ext_resource type="Texture2D" uid="uid://cy253llmnj6iq" path="res://Geometry Dash Character.png" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://caehv40bm6w5d" path="res://gold-coins-symbol-png.webp" id="3_epypp"]
+[ext_resource type="PackedScene" uid="uid://b86ki5k847bi" path="res://cookie.tscn" id="4_0hol4"]
+[ext_resource type="Texture2D" uid="uid://c8d8skjpjg2nw" path="res://Money-Bag-PNG-Pic.png" id="5_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://duk7x3f6an2lm" path="res://Screenshot 2026-11-14 170811.png" id="6_kdubu"]
+[ext_resource type="AudioStream" uid="uid://bq0872ry40wel" path="res://Geometry Dash - Level 2 Stage 2 Back On Track - Complete [youaretube.com].mp3" id="7_d21ai"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e7ael"]
+radius = 256.81442
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oy2km"]
+size = Vector2(193.63525, 147.22269)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ob602"]
+radius = 5.368321
+
+[node name="Node2D" type="Node2D" unique_id=1570085423]
+script = ExtResource("1_rj586")
+
+[node name="Basket" type="Area2D" parent="." unique_id=490372685 groups=["Basket"]]
+position = Vector2(-78, -83)
+rotation = 1.0448394
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" type="Sprite2D" parent="Basket" unique_id=1037946742]
+position = Vector2(472.63428, -134.95882)
+rotation = -1.072144
+scale = Vector2(0.40156183, 0.24684246)
+texture = ExtResource("5_q6r6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Basket" unique_id=1365555477]
+position = Vector2(469.9005, -134.23322)
+rotation = -2.2439244
+scale = Vector2(0.25931835, 0.39362046)
+skew = -0.2410239
+shape = SubResource("CircleShape2D_e7ael")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1266240575]
+position = Vector2(-43, -97)
+script = ExtResource("1_0e48y")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=605181854]
+position = Vector2(151.00003, 580)
+scale = Vector2(0.57519525, 0.27539074)
+texture = ExtResource("2_epypp")
+
+[node name="PickupArea" type="Area2D" parent="Player" unique_id=691500387]
+position = Vector2(5, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/PickupArea" unique_id=1509999445]
+position = Vector2(148.99998, 588.99994)
+rotation = -0.00034302473
+shape = SubResource("RectangleShape2D_oy2km")
+
+[node name="HeldCoin" type="Sprite2D" parent="Player" unique_id=1263605151]
+visible = false
+position = Vector2(74, 554)
+rotation = 0.013703637
+scale = Vector2(-0.015285497, -0.020396091)
+texture = ExtResource("3_epypp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player" unique_id=1534971139]
+
+[node name="CoinCountDisplayLabel" type="Label" parent="Player/CanvasLayer" unique_id=1079781023]
+offset_left = 42.0
+offset_top = 23.0
+offset_right = 82.0
+offset_bottom = 46.0
+rotation = -0.034784973
+metadata/_edit_use_anchors_ = true
+
+[node name="Gold Coin" parent="." unique_id=250035952 groups=["Coin"] instance=ExtResource("4_0hol4")]
+position = Vector2(-861, -109)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin" unique_id=1594507240]
+position = Vector2(944, 569)
+rotation = 3.0795455
+scale = Vector2(6.907034, 6.1578803)
+shape = SubResource("CircleShape2D_ob602")
+
+[node name="Gold Coin3" parent="." unique_id=1515043899 groups=["Coin"] instance=ExtResource("4_0hol4")]
+position = Vector2(-450, -172)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin3" unique_id=2015636257]
+position = Vector2(944, 569)
+rotation = 3.0795455
+scale = Vector2(6.907034, 6.1578803)
+shape = SubResource("CircleShape2D_ob602")
+
+[node name="Gold Coin2" parent="." unique_id=1864408505 groups=["Coin"] instance=ExtResource("4_0hol4")]
+position = Vector2(-41, -279)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin2" unique_id=1324248832]
+position = Vector2(944, 569)
+rotation = 0.14454708
+scale = Vector2(6.907034, 6.1578803)
+shape = SubResource("CircleShape2D_ob602")
+
+[node name="Gold Coin4" parent="." unique_id=376611372 groups=["Coin"] instance=ExtResource("4_0hol4")]
+position = Vector2(-543, -381)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin4" unique_id=1033055436]
+position = Vector2(944, 569)
+rotation = 3.0795455
+scale = Vector2(6.907034, 6.1578803)
+shape = SubResource("CircleShape2D_ob602")
+
+[node name="Gold Coin5" parent="." unique_id=573315423 groups=["Coin"] instance=ExtResource("4_0hol4")]
+position = Vector2(-265, -422)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin5" unique_id=1675549469]
+position = Vector2(944, 569)
+rotation = 3.0795455
+scale = Vector2(6.907034, 6.1578803)
+shape = SubResource("CircleShape2D_ob602")
+
+[node name="Gold Coin6" parent="." unique_id=1255088510 groups=["Coin"] instance=ExtResource("4_0hol4")]
+position = Vector2(-272, -207)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin6" unique_id=1309969046]
+position = Vector2(944, 569)
+rotation = 3.0795455
+scale = Vector2(6.907034, 6.1578803)
+shape = SubResource("CircleShape2D_ob602")
+
+[node name="Gold Coin7" parent="." unique_id=1142458892 groups=["Coin"] instance=ExtResource("4_0hol4")]
+position = Vector2(31, -411)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin7" unique_id=808729949]
+position = Vector2(944, 569)
+rotation = 3.0795455
+scale = Vector2(6.907034, 6.1578803)
+shape = SubResource("CircleShape2D_ob602")
+
+[node name="Gold Coin8" parent="." unique_id=1326616177 groups=["Coin"] instance=ExtResource("4_0hol4")]
+position = Vector2(-833, -420)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin8" unique_id=805934755]
+position = Vector2(944, 569)
+rotation = 3.0795455
+scale = Vector2(6.907034, 6.1578803)
+shape = SubResource("CircleShape2D_ob602")
+
+[node name="Gold Coin9" parent="." unique_id=1742169207 groups=["Coin"] instance=ExtResource("4_0hol4")]
+position = Vector2(-459, -500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin9" unique_id=63122020]
+position = Vector2(944, 569)
+rotation = 3.0795455
+scale = Vector2(6.907034, 6.1578803)
+shape = SubResource("CircleShape2D_ob602")
+
+[node name="Gold Coin10" parent="." unique_id=645067912 groups=["Coin"] instance=ExtResource("4_0hol4")]
+position = Vector2(-802, -195)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin10" unique_id=328796668]
+position = Vector2(944, 569)
+rotation = 3.0795455
+scale = Vector2(6.907034, 6.1578803)
+shape = SubResource("CircleShape2D_ob602")
+
+[node name="Screenshot20261114170811" type="Sprite2D" parent="." unique_id=589522405]
+show_behind_parent = true
+position = Vector2(581.00006, 364)
+scale = Vector2(2.297571, 2.2114093)
+texture = ExtResource("6_kdubu")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1712029606]
+stream = ExtResource("7_d21ai")
+autoplay = true
+
+[connection signal="area_entered" from="Player/PickupArea" to="Player" method="_on_pickup_area_area_entered"]
