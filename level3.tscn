@@ -1,0 +1,173 @@
+[gd_scene format=3 uid="uid://bwjmnuirwibsc"]
+
+[ext_resource type="Texture2D" uid="uid://dpc3fbwa42wg2" path="res://geometry-dash-1600-x-900-background-g8hjyws8q3r8r69l.jpg" id="1_bmsap"]
+[ext_resource type="Texture2D" uid="uid://22mv4e6qh0ru" path="res://OIP (5).webp" id="1_mu84n"]
+[ext_resource type="Texture2D" uid="uid://cdjnqfnbsnnu2" path="res://OIP (3).webp" id="2_bmsap"]
+[ext_resource type="Script" uid="uid://bhr3syq35lcpy" path="res://player.gd" id="3_rqrji"]
+[ext_resource type="Texture2D" uid="uid://c4457dice5ryi" path="res://31073475fc4fe0f27c6b876472f0888e.png" id="4_8x87a"]
+[ext_resource type="Texture2D" uid="uid://b5nef6dpidw18" path="res://diamond.webp" id="6_rqrji"]
+[ext_resource type="PackedScene" uid="uid://yf2602rjikfv" path="res://fire.tscn" id="6_sotx7"]
+
+[sub_resource type="GDScript" id="GDScript_eqrsh"]
+script/source = "extends Node2D
+const diamond = preload(\"res://diamond.webp\")
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	$Fire.change_image(diamond)
+	$Fire.scale(5.0)
+	$Fire2.change_image(diamond)
+	$Fire2.scale(5.0)
+	$Fire3.change_image(diamond)
+	$Fire3.scale(5.0)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3ly3"]
+size = Vector2(314.84473, 185.3584)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5p5ba"]
+radius = 21.640451
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1u83"]
+size = Vector2(263.6905, 296.49805)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5p5ba"]
+size = Vector2(122.57031, 19.5)
+
+[node name="Node2D" type="Node2D" unique_id=581303152]
+position = Vector2(61, 31)
+script = SubResource("GDScript_eqrsh")
+
+[node name="GeometeryDashV2" type="Sprite2D" parent="." unique_id=1836274510]
+position = Vector2(515.5, 292.25003)
+scale = Vector2(0.71812505, 0.7216667)
+texture = ExtResource("1_bmsap")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GeometeryDashV2" unique_id=370492197]
+position = Vector2(14.7188835, 57.99934)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1132615094]
+position = Vector2(1461, -230.99998)
+scale = Vector2(2.350144, -0.025647165)
+texture = ExtResource("1_mu84n")
+
+[node name="Basket" type="Area2D" parent="." unique_id=314186534 groups=["basket"]]
+position = Vector2(272.00003, 318)
+scale = Vector2(0.5433538, -0.36804742)
+
+[node name="Oip(3)" type="Sprite2D" parent="Basket" unique_id=547635674]
+position = Vector2(-86.49981, 73.36009)
+texture = ExtResource("2_bmsap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Basket" unique_id=878023421]
+position = Vector2(-85.86694, 55.6084)
+scale = Vector2(1, 0.99999976)
+shape = SubResource("RectangleShape2D_n3ly3")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1009537867]
+position = Vector2(50, 242)
+scale = Vector2(0.40994838, 0.4153606)
+script = ExtResource("3_rqrji")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1318704825]
+texture = ExtResource("4_8x87a")
+
+[node name="Pickup Area" type="Area2D" parent="Player" unique_id=498171429]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Pickup Area" unique_id=1725032963]
+position = Vector2(4.878661, 2.407547)
+rotation = -3.1415925
+scale = Vector2(11.687304, 7.763768)
+shape = SubResource("CircleShape2D_5p5ba")
+
+[node name="Heldfire" type="Sprite2D" parent="Player" unique_id=744416421]
+position = Vector2(170.7532, -26.483027)
+scale = Vector2(-0.15812299, 0.17503338)
+texture = ExtResource("6_rqrji")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player" unique_id=1466967059]
+
+[node name="FireCountDisplay" type="Label" parent="Player/CanvasLayer" unique_id=1172269275]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "fire:0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1933239974]
+position = Vector2(-9.757333, 7.222658)
+scale = Vector2(1, 0.9999999)
+shape = SubResource("RectangleShape2D_r1u83")
+
+[node name="Fire" parent="." unique_id=1951865254 instance=ExtResource("6_sotx7")]
+position = Vector2(820, 418)
+
+[node name="Fire2" parent="." unique_id=668814660 instance=ExtResource("6_sotx7")]
+position = Vector2(535, 369)
+
+[node name="Fire3" parent="." unique_id=350116197 instance=ExtResource("6_sotx7")]
+position = Vector2(1006, 214)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=454703750]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1335857737]
+position = Vector2(181, 575)
+shape = SubResource("RectangleShape2D_5p5ba")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1708607039]
+position = Vector2(73, -3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1539317429]
+position = Vector2(253, 578)
+shape = SubResource("RectangleShape2D_5p5ba")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1419302149]
+position = Vector2(426, 465)
+shape = SubResource("RectangleShape2D_5p5ba")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2" unique_id=261036825]
+position = Vector2(-190, 583)
+shape = SubResource("RectangleShape2D_5p5ba")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D2" unique_id=4444326]
+position = Vector2(348, -22)
+shape = SubResource("RectangleShape2D_5p5ba")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1924288609]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1055870884]
+position = Vector2(590, 467)
+shape = SubResource("RectangleShape2D_5p5ba")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1548544708]
+position = Vector2(744, 594)
+shape = SubResource("RectangleShape2D_5p5ba")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D3" unique_id=491254650]
+position = Vector2(884, -30)
+shape = SubResource("RectangleShape2D_5p5ba")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D3" unique_id=2139108651]
+position = Vector2(224, -23)
+shape = SubResource("RectangleShape2D_5p5ba")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1355892787]
+position = Vector2(35, 578)
+shape = SubResource("RectangleShape2D_5p5ba")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D3" unique_id=2075764778]
+position = Vector2(-1272, 625)
+shape = SubResource("RectangleShape2D_5p5ba")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D3" unique_id=84357051]
+position = Vector2(666, -29)
+shape = SubResource("RectangleShape2D_5p5ba")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1822358294]
+position = Vector2(951, 598)
+shape = SubResource("RectangleShape2D_5p5ba")
+
+[connection signal="area_entered" from="Player/Pickup Area" to="Player" method="_on_pickup_area_area_entered"]

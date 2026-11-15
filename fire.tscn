@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://yf2602rjikfv"]
+
+[ext_resource type="Texture2D" uid="uid://c83c3ufttela0" path="res://flame-clipart-vector-8.png" id="1_2pqqt"]
+[ext_resource type="Script" uid="uid://bwl3dhgmpmsi" path="res://fire.gd" id="1_5ltu8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r1u83"]
+radius = 1902.899
+
+[node name="Fire" type="Area2D" unique_id=1951865254 groups=["fire"]]
+scale = Vector2(0.046736512, 0.04041635)
+script = ExtResource("1_5ltu8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=8553655]
+position = Vector2(-8, 10)
+texture = ExtResource("1_2pqqt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1150217088]
+position = Vector2(-54, 33)
+shape = SubResource("CircleShape2D_r1u83")
