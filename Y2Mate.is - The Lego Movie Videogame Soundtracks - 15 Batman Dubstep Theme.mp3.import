@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dyvt8t1t0wtv1"
+path="res://.godot/imported/Y2Mate.is - The Lego Movie Videogame Soundtracks - 15 Batman Dubstep Theme.mp3-3705a983c15b674d35b082bc3778d61a.mp3str"
+
+[deps]
+
+source_file="res://Y2Mate.is - The Lego Movie Videogame Soundtracks - 15 Batman Dubstep Theme.mp3"
+dest_files=["res://.godot/imported/Y2Mate.is - The Lego Movie Videogame Soundtracks - 15 Batman Dubstep Theme.mp3-3705a983c15b674d35b082bc3778d61a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
