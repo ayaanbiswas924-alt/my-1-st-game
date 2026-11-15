@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dxxo4xdlvjwjc"]
+
+[ext_resource type="Texture2D" uid="uid://bma301qys81td" path="res://Yellow_Orb.png" id="1_ogqpy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x0ne6"]
+radius = 33.01515
+
+[node name="Orb" type="Area2D" unique_id=1738047110 groups=["Orb"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2065940774]
+position = Vector2(310, 206.00003)
+scale = Vector2(0.15463634, 0.14210571)
+texture = ExtResource("1_ogqpy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=678780664]
+position = Vector2(310, 205)
+shape = SubResource("CircleShape2D_x0ne6")
