@@ -39,3 +39,11 @@ func _on_button_6_pressed() -> void:
 	
 func _on_button_7_pressed() -> void:
 	get_tree().change_scene_to_file("res://level7.tscn")
+
+
+func _on_button_10_pressed() -> void:
+	get_tree().change_scene_to_file("res://level10.tscn")
+
+
+func _on_button_boss_pressed() -> void:
+	get_tree().change_scene_to_file("res://BossLevel.tscn")

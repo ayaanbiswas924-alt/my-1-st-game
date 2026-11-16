@@ -1,200 +1,54 @@
 [gd_scene format=3 uid="uid://b41yj162i8fep"]
 
-[ext_resource type="Script" uid="uid://dfxmqobu8rore" path="res://level_7.gd" id="1_xjlyk"]
-[ext_resource type="Texture2D" uid="uid://c8d8skjpjg2nw" path="res://Money-Bag-PNG-Pic.png" id="2_gespk"]
-[ext_resource type="Texture2D" uid="uid://c1kwmvmfemuw0" path="res://BasketBall Hoop PNG.webp" id="3_gespk"]
-[ext_resource type="Script" uid="uid://cvvah74j6ag5a" path="res://player.gd" id="3_xjlyk"]
-[ext_resource type="Texture2D" uid="uid://cy253llmnj6iq" path="res://Geometry Dash Character.png" id="4_tprm6"]
-[ext_resource type="Texture2D" uid="uid://ds6oy8kkioqbt" path="res://basketball-clipart-basketball-vector-basketball-illustration-sports-clipart-sports-vector-sport_844323-215.png" id="4_xjlyk"]
-[ext_resource type="PackedScene" uid="uid://b86ki5k847bi" path="res://cookie.tscn" id="6_hqc6n"]
-[ext_resource type="Texture2D" uid="uid://duk7x3f6an2lm" path="res://Screenshot 2026-11-14 170811.png" id="7_gyqhg"]
-[ext_resource type="AudioStream" uid="uid://bq0872ry40wel" path="res://Geometry Dash - Level 2 Stage 2 Back On Track - Complete [youaretube.com].mp3" id="8_q68kt"]
-[ext_resource type="Texture2D" uid="uid://dp1nhcbndaj5v" path="res://modern-basketball-court-with-shining-lights-on-black-background-vector.jpg" id="10_xjlyk"]
+[ext_resource type="Script" uid="uid://dqq67aa87fb2y" path="res://level_7.gd" id="1_xjlyk"]
+[ext_resource type="Texture2D" uid="uid://4d363b6j71bb" path="res://BasketBall Hoop PNG.webp" id="3_gespk"]
+[ext_resource type="Script" uid="uid://bhr3syq35lcpy" path="res://player.gd" id="3_xjlyk"]
+[ext_resource type="Texture2D" uid="uid://dc8ry1aa5h6qj" path="res://basketball-clipart-basketball-vector-basketball-illustration-sports-clipart-sports-vector-sport_844323-215.png" id="4_xjlyk"]
+[ext_resource type="Texture2D" uid="uid://c4457dice5ryi" path="res://31073475fc4fe0f27c6b876472f0888e.png" id="5_vu30u"]
+[ext_resource type="Texture2D" uid="uid://b55v0mtj6ut2q" path="res://Screenshot 2026-11-14 170811.png" id="7_gyqhg"]
+[ext_resource type="AudioStream" uid="uid://b07ppa77lpo77" path="res://Geometry Dash - Level 2 Stage 2 Back On Track - Complete [youaretube.com].mp3" id="8_q68kt"]
+[ext_resource type="Texture2D" uid="uid://c8ve6l6ce0k0k" path="res://modern-basketball-court-with-shining-lights-on-black-background-vector.jpg" id="10_xjlyk"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_e7ael"]
-radius = 243.63823
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3un0t"]
+size = Vector2(294.05566, 447.30792)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oy2km"]
-size = Vector2(193.63525, 147.22269)
+[sub_resource type="CircleShape2D" id="CircleShape2D_3un0t"]
+radius = 29.427877
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ob602"]
-radius = 5.407875
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n51wx"]
+size = Vector2(1374, 22.875)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m082e"]
+radius = 21.640451
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vu30u"]
+size = Vector2(263.6905, 296.49805)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkg2y"]
+size = Vector2(2351, 185.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m082e"]
+size = Vector2(205, 709)
 
 [node name="Node2D" type="Node2D" unique_id=1570085423]
 script = ExtResource("1_xjlyk")
 
-[node name="Basket" type="Area2D" parent="." unique_id=490372685 groups=["Basket"]]
+[node name="Basket" type="Area2D" parent="." unique_id=490372685 groups=["Basket", "basket"]]
 position = Vector2(-78, -83)
 rotation = 1.0448394
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="Sprite2D" type="Sprite2D" parent="Basket" unique_id=1037946742]
-position = Vector2(1272.2188, -231.59587)
-rotation = -1.072144
-scale = Vector2(0.40156183, 0.24684246)
-texture = ExtResource("2_gespk")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Basket" unique_id=1365555477]
-position = Vector2(592.0318, -382.46896)
-rotation = -2.2439244
-scale = Vector2(0.34869495, 0.5339377)
-skew = -0.2410239
-shape = SubResource("CircleShape2D_e7ael")
-
 [node name="BasketBallHoopPng" type="Sprite2D" parent="Basket" unique_id=2083122304]
-position = Vector2(547.2246, -432.76123)
+position = Vector2(582.81854, -450.25623)
 rotation = -1.0362928
 scale = Vector2(-0.92336094, 0.5464614)
 texture = ExtResource("3_gespk")
 
-[node name="BasketballClipartBasketballVectorBasketballIllustrationSportsClipartSportsVectorSport844323215" type="Sprite2D" parent="Basket" unique_id=1431107868]
-position = Vector2(414.09357, -8.218945)
-scale = Vector2(0.033927258, 0.030688057)
-texture = ExtResource("4_xjlyk")
-
-[node name="BasketballClipartBasketballVectorBasketballIllustrationSportsClipartSportsVectorSport844323216" type="Sprite2D" parent="Basket" unique_id=961608322]
-position = Vector2(1111.7695, -640.4004)
-scale = Vector2(0.033927258, 0.030688057)
-texture = ExtResource("4_xjlyk")
-
-[node name="BasketballClipartBasketballVectorBasketballIllustrationSportsClipartSportsVectorSport844323217" type="Sprite2D" parent="Basket" unique_id=703068122]
-position = Vector2(771.47217, -795.16034)
-scale = Vector2(0.033927258, 0.030688057)
-texture = ExtResource("4_xjlyk")
-
-[node name="BasketballClipartBasketballVectorBasketballIllustrationSportsClipartSportsVectorSport844323218" type="Sprite2D" parent="Basket" unique_id=1941783770]
-position = Vector2(949.96533, -431.3826)
-scale = Vector2(0.033927258, 0.030688057)
-texture = ExtResource("4_xjlyk")
-
-[node name="BasketballClipartBasketballVectorBasketballIllustrationSportsClipartSportsVectorSport844323219" type="Sprite2D" parent="Basket" unique_id=1759569076]
-position = Vector2(804.77747, -57.777924)
-scale = Vector2(0.033927258, 0.030688057)
-texture = ExtResource("4_xjlyk")
-
-[node name="Player" type="CharacterBody2D" parent="." unique_id=1266240575]
-position = Vector2(-43, -97)
-script = ExtResource("3_xjlyk")
-
-[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=605181854]
-position = Vector2(151.00003, 580)
-scale = Vector2(0.57519525, 0.27539074)
-texture = ExtResource("4_tprm6")
-
-[node name="PickupArea" type="Area2D" parent="Player" unique_id=691500387]
-position = Vector2(8, -13)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/PickupArea" unique_id=1509999445]
-position = Vector2(148.99998, 588.99994)
-rotation = -0.00034302473
-shape = SubResource("RectangleShape2D_oy2km")
-
-[node name="HeldCoin" type="Sprite2D" parent="Player" unique_id=1263605151]
-visible = false
-position = Vector2(74, 554)
-rotation = 0.013703637
-scale = Vector2(-0.015285497, -0.020396091)
-texture = ExtResource("4_xjlyk")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Player" unique_id=1534971139]
-
-[node name="CoinCountDisplayLabel" type="Label" parent="Player/CanvasLayer" unique_id=1079781023]
-offset_left = 42.0
-offset_top = 23.0
-offset_right = 82.0
-offset_bottom = 46.0
-rotation = -0.034784973
-metadata/_edit_use_anchors_ = true
-
-[node name="Gold Coin" parent="." unique_id=250035952 groups=["Coin"] instance=ExtResource("6_hqc6n")]
-position = Vector2(-583, 564)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin" unique_id=1594507240]
-position = Vector2(1343, -48.000004)
-rotation = 3.0795455
-scale = Vector2(6.907034, 6.1578803)
-shape = SubResource("CircleShape2D_ob602")
-
-[node name="Gold Coin3" parent="." unique_id=1515043899 groups=["Coin"] instance=ExtResource("6_hqc6n")]
-position = Vector2(-441, 393)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin3" unique_id=2015636257]
-position = Vector2(817.99994, 196.00003)
-rotation = 3.0795455
-scale = Vector2(6.907034, 6.1578803)
-shape = SubResource("CircleShape2D_ob602")
-
-[node name="Gold Coin2" parent="." unique_id=1864408505 groups=["Coin"] instance=ExtResource("6_hqc6n")]
-position = Vector2(-128, 470)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin2" unique_id=1324248832]
-position = Vector2(1160.9999, 84)
-rotation = 0.14454708
-scale = Vector2(6.907034, 6.1578803)
-shape = SubResource("CircleShape2D_ob602")
-
-[node name="Gold Coin4" parent="." unique_id=376611372 groups=["Coin"] instance=ExtResource("6_hqc6n")]
-position = Vector2(358, 405)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin4" unique_id=1033055436]
-position = Vector2(-212, -135.99994)
-rotation = 3.0795455
-scale = Vector2(6.907034, 6.1578803)
-shape = SubResource("CircleShape2D_ob602")
-
-[node name="Gold Coin5" parent="." unique_id=573315423 groups=["Coin"] instance=ExtResource("6_hqc6n")]
-position = Vector2(544, 83)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin5" unique_id=1675549469]
-position = Vector2(451, 96.00004)
-rotation = 3.0795455
-scale = Vector2(6.907034, 6.1578803)
-shape = SubResource("CircleShape2D_ob602")
-
-[node name="Gold Coin6" parent="." unique_id=1255088510 groups=["Coin"] instance=ExtResource("6_hqc6n")]
-position = Vector2(583, 294)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin6" unique_id=1309969046]
-position = Vector2(944, 569)
-rotation = 3.0795455
-scale = Vector2(6.907034, 6.1578803)
-shape = SubResource("CircleShape2D_ob602")
-
-[node name="Gold Coin7" parent="." unique_id=1142458892 groups=["Coin"] instance=ExtResource("6_hqc6n")]
-position = Vector2(964, -7)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin7" unique_id=808729949]
-position = Vector2(944, 569)
-rotation = 3.0795455
-scale = Vector2(6.907034, 6.1578803)
-shape = SubResource("CircleShape2D_ob602")
-
-[node name="Gold Coin8" parent="." unique_id=1326616177 groups=["Coin"] instance=ExtResource("6_hqc6n")]
-position = Vector2(1019, 49)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin8" unique_id=805934755]
-position = Vector2(944, 569)
-rotation = 3.0795455
-scale = Vector2(6.907034, 6.1578803)
-shape = SubResource("CircleShape2D_ob602")
-
-[node name="Gold Coin9" parent="." unique_id=1742169207 groups=["Coin"] instance=ExtResource("6_hqc6n")]
-position = Vector2(795, 93)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin9" unique_id=63122020]
-position = Vector2(944, 569)
-rotation = 3.0795455
-scale = Vector2(6.907034, 6.1578803)
-shape = SubResource("CircleShape2D_ob602")
-
-[node name="Gold Coin10" parent="." unique_id=645067912 groups=["Coin"] instance=ExtResource("6_hqc6n")]
-position = Vector2(3278, 1169)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gold Coin10" unique_id=328796668]
-position = Vector2(944, 569)
-rotation = 3.0795455
-scale = Vector2(6.907034, 6.1578803)
-shape = SubResource("CircleShape2D_ob602")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Basket" unique_id=1343063284]
+position = Vector2(582.88806, -451.37213)
+rotation = 0.5235988
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_3un0t")
 
 [node name="Screenshot20261114170811" type="Sprite2D" parent="." unique_id=589522405]
 show_behind_parent = true
@@ -208,8 +62,121 @@ autoplay = true
 
 [node name="ModernBasketballCourtWithShiningLightsOnBlackBackgroundVector" type="Sprite2D" parent="." unique_id=1306608672]
 show_behind_parent = true
-position = Vector2(564, 316.125)
+position = Vector2(583, 325)
 scale = Vector2(0.60833335, 0.5091798)
 texture = ExtResource("10_xjlyk")
 
-[connection signal="area_entered" from="Player/PickupArea" to="Player" method="_on_pickup_area_area_entered"]
+[node name="BasketBall" type="Area2D" parent="." unique_id=725417829 groups=["fire"]]
+position = Vector2(402, 586)
+
+[node name="Sprite2D" type="Sprite2D" parent="BasketBall" unique_id=1425146433]
+scale = Vector2(0.03550001, 0.02925)
+texture = ExtResource("4_xjlyk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BasketBall" unique_id=611534503]
+shape = SubResource("CircleShape2D_3un0t")
+
+[node name="BasketBall2" type="Area2D" parent="." unique_id=428955490 groups=["fire"]]
+position = Vector2(760, 469)
+
+[node name="Sprite2D" type="Sprite2D" parent="BasketBall2" unique_id=2025372647]
+scale = Vector2(0.03550001, 0.02925)
+texture = ExtResource("4_xjlyk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BasketBall2" unique_id=2065319801]
+shape = SubResource("CircleShape2D_3un0t")
+
+[node name="BasketBall3" type="Area2D" parent="." unique_id=1672603578 groups=["fire"]]
+position = Vector2(968, 148)
+
+[node name="Sprite2D" type="Sprite2D" parent="BasketBall3" unique_id=418232882]
+scale = Vector2(0.03550001, 0.02925)
+texture = ExtResource("4_xjlyk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BasketBall3" unique_id=447765746]
+shape = SubResource("CircleShape2D_3un0t")
+
+[node name="BasketBall4" type="Area2D" parent="." unique_id=1004331228 groups=["fire"]]
+position = Vector2(1036, 458)
+
+[node name="Sprite2D" type="Sprite2D" parent="BasketBall4" unique_id=1788501111]
+scale = Vector2(0.03550001, 0.02925)
+texture = ExtResource("4_xjlyk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BasketBall4" unique_id=282892000]
+shape = SubResource("CircleShape2D_3un0t")
+
+[node name="BasketBall5" type="Area2D" parent="." unique_id=437680040 groups=["fire"]]
+position = Vector2(257, 261)
+
+[node name="Sprite2D" type="Sprite2D" parent="BasketBall5" unique_id=182513676]
+scale = Vector2(0.03550001, 0.02925)
+texture = ExtResource("4_xjlyk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BasketBall5" unique_id=84613472]
+shape = SubResource("CircleShape2D_3un0t")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=250594991]
+position = Vector2(73, -3)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2" unique_id=154350234]
+position = Vector2(503, 658.5625)
+shape = SubResource("RectangleShape2D_n51wx")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1521313365]
+position = Vector2(112, 517)
+scale = Vector2(0.40994838, 0.4153606)
+script = ExtResource("3_xjlyk")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=345832941]
+texture = ExtResource("5_vu30u")
+
+[node name="Pickup Area" type="Area2D" parent="Player" unique_id=1430432896]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Pickup Area" unique_id=2015559043]
+position = Vector2(4.878661, 2.407547)
+rotation = -3.1415925
+scale = Vector2(11.687304, 7.763768)
+shape = SubResource("CircleShape2D_m082e")
+
+[node name="Heldfire" type="Sprite2D" parent="Player" unique_id=56040849]
+visible = false
+position = Vector2(170.7532, -26.483027)
+scale = Vector2(-0.15812299, 0.17503338)
+texture = ExtResource("4_xjlyk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player" unique_id=1071782477]
+
+[node name="FireCountDisplay" type="Label" parent="Player/CanvasLayer" unique_id=1599408281]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "fire:0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1185417342]
+position = Vector2(-9.757333, 7.222658)
+scale = Vector2(1, 0.9999999)
+shape = SubResource("RectangleShape2D_vu30u")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1146847318]
+position = Vector2(0, 45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1805601732]
+position = Vector2(661.5, 660.25)
+shape = SubResource("RectangleShape2D_rkg2y")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1439235651]
+position = Vector2(603, -120)
+shape = SubResource("RectangleShape2D_rkg2y")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=346719944]
+position = Vector2(0, 45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=890695783]
+position = Vector2(-130, 293)
+shape = SubResource("RectangleShape2D_m082e")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D3" unique_id=188959517]
+position = Vector2(1299, 252)
+shape = SubResource("RectangleShape2D_m082e")
+
+[connection signal="area_entered" from="Player/Pickup Area" to="Player" method="_on_pickup_area_area_entered"]

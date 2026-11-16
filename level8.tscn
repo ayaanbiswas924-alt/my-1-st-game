@@ -27,6 +27,12 @@ func _process(delta: float) -> void:
 	pass
 "
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2kba5"]
+size = Vector2(2351, 185.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6qolp"]
+size = Vector2(205, 709)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n3ly3"]
 size = Vector2(314.84473, 185.3584)
 
@@ -37,7 +43,7 @@ radius = 21.640451
 size = Vector2(263.6905, 296.49805)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5p5ba"]
-size = Vector2(151.28516, 19.125)
+size = Vector2(151.28516, 20.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_psl30"]
 size = Vector2(127.32129, 11)
@@ -53,6 +59,30 @@ texture = ExtResource("1_2kba5")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="GeometeryDashV2" unique_id=370492197]
 position = Vector2(14.7188835, 57.99934)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="GeometeryDashV2" unique_id=473817217]
+position = Vector2(-260.39484, -208.48482)
+scale = Vector2(0.44944602, 0.70457613)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GeometeryDashV2/StaticBody2D2" unique_id=1718710155]
+position = Vector2(661.5, 660.25)
+shape = SubResource("RectangleShape2D_2kba5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="GeometeryDashV2/StaticBody2D2" unique_id=1560662912]
+position = Vector2(603, -120)
+shape = SubResource("RectangleShape2D_2kba5")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="GeometeryDashV2" unique_id=717352952]
+position = Vector2(-260.39484, -208.48482)
+scale = Vector2(0.44944602, 0.70457613)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GeometeryDashV2/StaticBody2D3" unique_id=422943487]
+position = Vector2(-130, 293)
+shape = SubResource("RectangleShape2D_6qolp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="GeometeryDashV2/StaticBody2D3" unique_id=362456183]
+position = Vector2(1299, 252)
+shape = SubResource("RectangleShape2D_6qolp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1132615094]
 position = Vector2(1461, -230.99998)
@@ -179,7 +209,7 @@ position = Vector2(896, 474)
 shape = SubResource("RectangleShape2D_5p5ba")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1028481076]
-position = Vector2(1036, 535)
+position = Vector2(896, 474)
 shape = SubResource("RectangleShape2D_5p5ba")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D3" unique_id=2000692279]

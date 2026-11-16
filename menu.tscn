@@ -173,7 +173,7 @@ theme = SubResource("Theme_h1wq0")
 text = "Boss Level"
 
 [node name="LevelSelect(1)" type="Sprite2D" parent="." unique_id=1987582898]
-position = Vector2(582, 318.5)
+position = Vector2(582, 318.00003)
 scale = Vector2(1.2777778, 1.2747035)
 texture = ExtResource("2_ouk20")
 
@@ -183,8 +183,8 @@ texture = ExtResource("2_ouk20")
 [connection signal="pressed" from="CanvasLayer/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button5" to="." method="_on_button_5_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button6" to="." method="_on_button_6_pressed"]
-[connection signal="pressed" from="CanvasLayer/Button7" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button7" to="." method="_on_button_7_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button8" to="." method="_on_button_8_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button9" to="." method="_on_button_9_pressed"]
-[connection signal="pressed" from="CanvasLayer/Button10" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="CanvasLayer/Boss Level" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button10" to="." method="_on_button_10_pressed"]
+[connection signal="pressed" from="CanvasLayer/Boss Level" to="." method="_on_button_boss_pressed"]

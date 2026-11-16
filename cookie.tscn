@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://b86ki5k847bi"]
 
-[ext_resource type="Texture2D" uid="uid://caehv40bm6w5d" path="res://gold-coins-symbol-png.webp" id="1_0fkkf"]
+[ext_resource type="Texture2D" uid="uid://c2slyborm0fg" path="res://gold-coins-symbol-png.webp" id="1_0fkkf"]
 
 [node name="Cookie" type="Area2D" unique_id=250035952]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1529142326]
-position = Vector2(945.058, 573.91)
 scale = Vector2(0.057352073, 0.029072864)
 texture = ExtResource("1_0fkkf")

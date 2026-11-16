@@ -22,8 +22,18 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, 12)
 	
 	move_and_slide()
-	if fire_count == 3:
-		get_tree().change_scene_to_file("res://menu.tscn")
+	if get_tree().current_scene.scene_file_path == "res://level6.tscn":
+		if(fire_count == 10):
+			get_tree().change_scene_to_file("res://menu.tscn")
+	elif get_tree().current_scene.scene_file_path == "res://level7.tscn":
+		if(fire_count == 5):
+			get_tree().change_scene_to_file("res://menu.tscn")
+	elif get_tree().current_scene.scene_file_path == "res://level10.tscn":
+		if(fire_count == 5):
+			get_tree().change_scene_to_file("res://menu.tscn")
+	else:
+		if fire_count == 3: 
+			get_tree().change_scene_to_file("res://menu.tscn")
 
 func _on_pickup_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("fire") and not $Heldfire.visible:

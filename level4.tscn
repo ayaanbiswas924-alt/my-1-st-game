@@ -35,6 +35,12 @@ radius = 21.640451
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1u83"]
 size = Vector2(263.6905, 296.49805)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvvno"]
+size = Vector2(2351, 185.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b4lsh"]
+size = Vector2(205, 709)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5p5ba"]
 size = Vector2(127.32129, 11)
 
@@ -69,7 +75,7 @@ scale = Vector2(1, 0.99999976)
 shape = SubResource("RectangleShape2D_n3ly3")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1009537867]
-position = Vector2(50, 242)
+position = Vector2(46, 355)
 scale = Vector2(0.40994838, 0.4153606)
 script = ExtResource("4_fx4lf")
 
@@ -107,6 +113,28 @@ position = Vector2(540, 87)
 
 [node name="Fire2" parent="." unique_id=668814660 instance=ExtResource("7_dguho")]
 position = Vector2(401, 326)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Fire2" unique_id=29347934]
+scale = Vector2(1, 1.0075291)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fire2/StaticBody2D" unique_id=978857979]
+position = Vector2(661.5, 660.25)
+shape = SubResource("RectangleShape2D_bvvno")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fire2/StaticBody2D" unique_id=445650816]
+position = Vector2(603, -120)
+shape = SubResource("RectangleShape2D_bvvno")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Fire2" unique_id=1910235376]
+scale = Vector2(1, 1.0075291)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fire2/StaticBody2D3" unique_id=744291734]
+position = Vector2(-130, 293)
+shape = SubResource("RectangleShape2D_b4lsh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fire2/StaticBody2D3" unique_id=258716270]
+position = Vector2(1299, 252)
+shape = SubResource("RectangleShape2D_b4lsh")
 
 [node name="Fire3" parent="." unique_id=350116197 instance=ExtResource("7_dguho")]
 position = Vector2(759, 217.99998)
@@ -205,5 +233,27 @@ shape = SubResource("RectangleShape2D_5p5ba")
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D3" unique_id=456473936]
 position = Vector2(1053, 555)
 shape = SubResource("RectangleShape2D_5p5ba")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1794001568]
+scale = Vector2(0.9315112, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1335132094]
+position = Vector2(661.5, 660.25)
+shape = SubResource("RectangleShape2D_bvvno")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D4" unique_id=860670891]
+position = Vector2(603, -120)
+shape = SubResource("RectangleShape2D_bvvno")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=2064386937]
+scale = Vector2(0.9315112, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=2060047237]
+position = Vector2(-130, 293)
+shape = SubResource("RectangleShape2D_b4lsh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D5" unique_id=403431942]
+position = Vector2(1299, 252)
+shape = SubResource("RectangleShape2D_b4lsh")
 
 [connection signal="area_entered" from="Player/Pickup Area" to="Player" method="_on_pickup_area_area_entered"]
